@@ -1,0 +1,47 @@
+<div class="container">
+
+    <h1>Galería de imágenes dinámica</h1>
+    <hr>
+
+    <div class="popino-gallery">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+
+                {{#each allpictures}}
+
+                <figure class="glide__slide">
+                    <img src="{{path}}" alt="{{description}}">
+                    <figcaption>
+                        <p>{{description}}</p>
+                    </figcaption>
+                </figure>
+
+                {{/each}}
+
+            </ul>
+        </div>
+    </div>
+
+
+    <h1>Galería de imágenes estática</h1>
+
+    <hr>
+
+    <div class="row images-inline-gallery">
+
+        {{#each allpictures}}
+
+        <div class="col-md-2">
+            <figure>
+                <img src="{{path}}" alt="{{description}}">
+            </figure>
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script src="/js/slideshow.js"></script>
